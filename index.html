@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GIFTAWEB creates interactive websites, creative digital experiences, and memorable surprise websites for couples, businesses, and events. Your gift, made digital.">
+    <meta property="og:title" content="GIFTAWEB — The Gift They'll Never Throw Away">
+    <meta property="og:description" content="Interactive websites, creative experiences, and memorable digital gifts — designed for people and businesses who want something extraordinary.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/hero-bg.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GIFTAWEB — The Gift They'll Never Throw Away">
+    <meta name="twitter:description" content="Handcrafted digital experiences, designed to delight.">
+    <meta name="theme-color" content="#FF8FAB">
+    <title>GIFTAWEB — The Gift They'll Never Throw Away</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💝</text></svg>" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-hearts">
+                <span class="preloader-heart">♥</span>
+                <span class="preloader-heart">♥</span>
+                <span class="preloader-heart">♥</span>
+            </div>
+            <p class="preloader-text">Unwrapping something special...</p>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Hearts Canvas -->
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-fill" id="scroll-progress-fill"></div>
+    </div>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav id="main-nav" class="main-nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">
+                <span class="nav-logo-icon">♥</span>
+                <span class="nav-logo-text">GIFTAWEB</span>
+                <span class="nav-logo-accent">studio</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#portfolio" class="nav-link" data-section="portfolio">Our Work</a>
+                <a href="#process" class="nav-link" data-section="process">Process</a>
+                <a href="#why" class="nav-link" data-section="why">Why GIFTAWEB</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <a href="https://instagram.com/giftaweb" target="_blank" rel="noopener noreferrer" class="nav-cta desktop-only" id="nav-cta">
+                <span class="nav-cta-icon">📸</span>
+                <span>@giftaweb</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <div class="mobile-nav-content">
+            <a href="#hero" class="mobile-nav-link">Home</a>
+            <a href="#portfolio" class="mobile-nav-link">Our Work</a>
+            <a href="#process" class="mobile-nav-link">Process</a>
+            <a href="#why" class="mobile-nav-link">Why GIFTAWEB</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="https://instagram.com/giftaweb" target="_blank" rel="noopener noreferrer" class="nav-cta mobile-nav-cta">
+                <span class="nav-cta-icon">📸</span>
+                <span>@giftaweb</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ===================== SECTION 1: HERO ===================== -->
+    <section id="hero" class="hero-section section">
+        <!-- Animated background shapes -->
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <!-- Decorative background image -->
+        <div class="hero-bg-image" aria-hidden="true"></div>
+
+        <!-- Floating decorative elements -->
+        <div class="hero-decorations" id="hero-decorations">
+            <!-- Polaroids -->
+            <div class="hero-deco-item hero-polaroid hero-polaroid-1" data-parallax="0.03">
+                <div style="width:100%;height:80px;background:linear-gradient(135deg,#FFD6E0,#FFECD2);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">🌸</div>
+                <div class="caption">made with love</div>
+            </div>
+            <div class="hero-deco-item hero-polaroid hero-polaroid-2" data-parallax="0.04">
+                <div style="width:100%;height:80px;background:linear-gradient(135deg,#E8D5F5,#FFD6E0);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">💝</div>
+                <div class="caption">a digital gift</div>
+            </div>
+
+            <!-- Sticky notes -->
+            <div class="hero-deco-item hero-sticky-note hero-note-1" data-parallax="0.025">
+                every website tells a story ✨
+            </div>
+            <div class="hero-deco-item hero-sticky-note hero-note-2" data-parallax="0.035">
+                designed to delight 🌷
+            </div>
+
+            <!-- Flowers -->
+            <div class="hero-deco-item hero-flower hero-flower-1" data-parallax="0.02">🌸</div>
+            <div class="hero-deco-item hero-flower hero-flower-2" data-parallax="0.015">🌷</div>
+            <div class="hero-deco-item hero-flower hero-flower-3" data-parallax="0.03">🌺</div>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="hero-phone" id="hero-phone" data-parallax="0.05">
+            <div class="phone-frame" id="phone-frame">
+                <div class="phone-screen">
+                    <div class="mini-heart">💕</div>
+                    <div class="mini-text">Your GIFTAWEB<br>experience</div>
+                    <div class="mini-btn">Open Gift</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main hero content -->
+        <div class="hero-content">
+            <span class="hero-label fade-in-up">✨ handcrafted digital experiences ✨</span>
+            <h1 class="hero-title fade-in-up delay-1">
+                The Gift They'll<br><span class="highlight">Never Throw Away</span>
+            </h1>
+            <p class="hero-subtitle fade-in-up delay-2">
+                Interactive websites, creative experiences, and memorable digital gifts — designed for people and businesses who want something extraordinary.
+            </p>
+            <div class="hero-buttons fade-in-up delay-3">
+                <a href="#services" class="btn btn-primary">
+                    Explore Our Work
+                    <span>→</span>
+                </a>
+                <a href="https://instagram.com/giftaweb" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    📸 @giftaweb
+                </a>
+            </div>
+            <div class="hero-scroll-indicator fade-in-up delay-5">
+                <span class="scroll-text">scroll to explore</span>
+                <span class="scroll-arrow">↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 2: WHAT WE CREATE ===================== -->
+    <section id="services" class="services-section section paper-texture">
+        <!-- Wave top -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                <path d="M0,60 C360,0 720,0 1080,30 C1260,45 1350,60 1440,60 L1440,0 L0,0 Z" fill="var(--cream)"/>
+            </svg>
+        </div>
+
+        <div class="container">
+            <span class="section-label fade-in-up">what we do</span>
+            <h2 class="section-title fade-in-up delay-1">Here's What We Create</h2>
+            <p class="section-subtitle fade-in-up delay-2">
+                Every project is a handcrafted experience — never a template, never generic, always made with love.
+            </p>
+
+            <div class="services-grid stagger-children">
+                <!-- Card 1: Surprise Websites -->
+                <div class="service-card" id="service-surprise">
+                    <div class="service-illustration">
+                        <div class="envelope-illustration">
+                            <div class="envelope-flap"></div>
+                            <div class="envelope-body"></div>
+                            <div class="envelope-heart">💌</div>
+                        </div>
+                        <div class="service-secret-message">You're my favorite person 💕</div>
+                    </div>
+                    <h3 class="service-card-title">Surprise Websites</h3>
+                    <p class="service-card-text">For couples, anniversaries, birthdays, and special moments that deserve to be remembered forever.</p>
+                    <span class="service-card-tag">For Love</span>
+                </div>
+
+                <!-- Card 2: Business Websites -->
+                <div class="service-card" id="service-business">
+                    <div class="service-illustration">
+                        <div class="website-illustration">
+                            <div class="web-header">
+                                <span class="web-dot"></span>
+                                <span class="web-dot"></span>
+                                <span class="web-dot"></span>
+                            </div>
+                            <div class="web-content">
+                                <div class="web-line"></div>
+                                <div class="web-line"></div>
+                                <div class="web-line"></div>
+                                <div class="web-btn-mini"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="service-card-title">Business Websites</h3>
+                    <p class="service-card-text">For brands and small businesses that want a website as unique as their story.</p>
+                    <span class="service-card-tag">For Brands</span>
+                </div>
+
+                <!-- Card 3: Logos & Social Media -->
+                <div class="service-card" id="service-design">
+                    <div class="service-illustration">
+                        <div class="logo-illustration">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="draw-path" d="M20 60 Q20 20 40 20 Q60 20 60 40 Q60 55 45 58 L40 65 L35 58 Q20 55 20 40" stroke="#E8567F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                                <path class="draw-path" d="M30 35 L40 28 L50 35" stroke="#FF8FAB" stroke-width="2" stroke-linecap="round" fill="none" style="stroke-dasharray:60;stroke-dashoffset:60;transition-delay:0.3s"/>
+                                <circle class="draw-path" cx="40" cy="45" r="5" stroke="#FFB3C6" stroke-width="2" fill="none" style="stroke-dasharray:40;stroke-dashoffset:40;transition-delay:0.6s"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="service-card-title">Logos & Social Media</h3>
+                    <p class="service-card-text">Beautiful visual identities and social media designs that make your brand unforgettable online.</p>
+                    <span class="service-card-tag">For Presence</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave bottom -->
+        <div class="wave-divider wave-divider-bottom">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                <path d="M0,60 C360,0 720,0 1080,30 C1260,45 1350,60 1440,60 L1440,0 L0,0 Z" fill="var(--cream-warm)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 3: INTERACTIVE BUILDER ===================== -->
+    <section id="builder" class="builder-section section">
+        <div class="container">
+            <span class="section-label fade-in-up">✨ try it yourself ✨</span>
+            <h2 class="section-title fade-in-up delay-1">Let's Create Something Together</h2>
+            <p class="section-subtitle fade-in-up delay-2">
+                Answer a few questions and watch your experience come alive — right before your eyes.
+            </p>
+
+            <!-- Progress dots -->
+            <div class="builder-progress fade-in-up delay-3" id="builder-progress">
+                <div class="builder-dot active" data-step="1"></div>
+                <div class="builder-dot" data-step="2"></div>
+                <div class="builder-dot" data-step="3"></div>
+            </div>
+
+            <div class="builder-wrapper fade-in-up delay-3">
+                <div class="builder-steps" id="builder-steps">
+                    <!-- Step 1: Who is this for? -->
+                    <div class="builder-step active" data-step="1" id="builder-step-1">
+                        <div class="builder-step-label">Step 1 of 3</div>
+                        <div class="builder-step-title">Who is this for?</div>
+                        <div class="builder-options" id="step1-options">
+                            <div class="builder-option" data-value="partner" tabindex="0" role="button">
+                                <span class="builder-option-icon">💕</span>
+                                <div class="builder-option-title">My Partner</div>
+                                <div class="builder-option-desc">A surprise gift they'll cherish</div>
+                            </div>
+                            <div class="builder-option" data-value="business" tabindex="0" role="button">
+                                <span class="builder-option-icon">💼</span>
+                                <div class="builder-option-title">My Business</div>
+                                <div class="builder-option-desc">A website that stands out</div>
+                            </div>
+                            <div class="builder-option" data-value="event" tabindex="0" role="button">
+                                <span class="builder-option-icon">🎉</span>
+                                <div class="builder-option-title">My Event</div>
+                                <div class="builder-option-desc">Make it unforgettable</div>
+                            </div>
+                        </div>
+                        <div class="builder-nav">
+                            <button class="builder-btn builder-btn-next" id="step1-next" disabled>
+                                Next Step →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Choose a vibe -->
+                    <div class="builder-step" data-step="2" id="builder-step-2">
+                        <div class="builder-step-label">Step 2 of 3</div>
+                        <div class="builder-step-title">Choose a vibe</div>
+                        <div class="builder-options" id="step2-options">
+                            <div class="builder-option" data-value="romantic" tabindex="0" role="button">
+                                <span class="builder-option-icon">🌹</span>
+                                <div class="builder-option-title">Romantic</div>
+                                <div class="builder-option-desc">Soft, dreamy, heartfelt</div>
+                            </div>
+                            <div class="builder-option" data-value="elegant" tabindex="0" role="button">
+                                <span class="builder-option-icon">✨</span>
+                                <div class="builder-option-title">Elegant</div>
+                                <div class="builder-option-desc">Refined, luxurious, polished</div>
+                            </div>
+                            <div class="builder-option" data-value="fun" tabindex="0" role="button">
+                                <span class="builder-option-icon">🎨</span>
+                                <div class="builder-option-title">Fun</div>
+                                <div class="builder-option-desc">Playful, vibrant, joyful</div>
+                            </div>
+                            <div class="builder-option" data-value="premium" tabindex="0" role="button">
+                                <span class="builder-option-icon">👑</span>
+                                <div class="builder-option-title">Premium</div>
+                                <div class="builder-option-desc">Exclusive, top-tier, bespoke</div>
+                            </div>
+                        </div>
+                        <div class="builder-nav">
+                            <button class="builder-btn builder-btn-back" id="step2-back">← Back</button>
+                            <button class="builder-btn builder-btn-next" id="step2-next" disabled>
+                                Next Step →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Choose colors -->
+                    <div class="builder-step" data-step="3" id="builder-step-3">
+                        <div class="builder-step-label">Step 3 of 3</div>
+                        <div class="builder-step-title">Pick a color palette</div>
+                        <div class="builder-palette" id="step3-options">
+                            <div class="palette-option" data-value="sunset" tabindex="0" role="button">
+                                <div class="palette-colors">
+                                    <div class="palette-swatch" style="background:#FF8FAB"></div>
+                                    <div class="palette-swatch" style="background:#FFD6E0"></div>
+                                    <div class="palette-swatch" style="background:#FFECD2"></div>
+                                    <div class="palette-swatch" style="background:#FFF8F0"></div>
+                                </div>
+                                <div class="palette-name">Sunset Love</div>
+                            </div>
+                            <div class="palette-option" data-value="ocean" tabindex="0" role="button">
+                                <div class="palette-colors">
+                                    <div class="palette-swatch" style="background:#89CFF0"></div>
+                                    <div class="palette-swatch" style="background:#B8E8FC"></div>
+                                    <div class="palette-swatch" style="background:#CDE8E5"></div>
+                                    <div class="palette-swatch" style="background:#F0F7EE"></div>
+                                </div>
+                                <div class="palette-name">Ocean Breeze</div>
+                            </div>
+                            <div class="palette-option" data-value="midnight" tabindex="0" role="button">
+                                <div class="palette-colors">
+                                    <div class="palette-swatch" style="background:#2D1B30"></div>
+                                    <div class="palette-swatch" style="background:#E8567F"></div>
+                                    <div class="palette-swatch" style="background:#F2C572"></div>
+                                    <div class="palette-swatch" style="background:#FFF8F0"></div>
+                                </div>
+                                <div class="palette-name">Midnight Rose</div>
+                            </div>
+                            <div class="palette-option" data-value="lavender" tabindex="0" role="button">
+                                <div class="palette-colors">
+                                    <div class="palette-swatch" style="background:#B8A9E8"></div>
+                                    <div class="palette-swatch" style="background:#E8D5F5"></div>
+                                    <div class="palette-swatch" style="background:#FFD6E0"></div>
+                                    <div class="palette-swatch" style="background:#FFFAFC"></div>
+                                </div>
+                                <div class="palette-name">Lavender Dreams</div>
+                            </div>
+                            <div class="palette-option" data-value="garden" tabindex="0" role="button">
+                                <div class="palette-colors">
+                                    <div class="palette-swatch" style="background:#A8D5BA"></div>
+                                    <div class="palette-swatch" style="background:#D4F0E7"></div>
+                                    <div class="palette-swatch" style="background:#FFECD2"></div>
+                                    <div class="palette-swatch" style="background:#FFE8EE"></div>
+                                </div>
+                                <div class="palette-name">Secret Garden</div>
+                            </div>
+                        </div>
+                        <div class="builder-nav">
+                            <button class="builder-btn builder-btn-back" id="step3-back">← Back</button>
+                            <button class="builder-btn builder-btn-next" id="step3-next" disabled>
+                                ✨ Create My Experience
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Magical Reveal Sequence -->
+                <div class="builder-reveal" id="builder-reveal">
+                    <div class="reveal-sparkles" id="reveal-sparkles"></div>
+
+                    <!-- Phase 1: Magic in progress -->
+                    <div class="reveal-magic" id="reveal-magic">
+                        <div class="magic-circle">
+                            <span class="magic-icon">🎁</span>
+                        </div>
+                        <p class="magic-text" id="magic-text">Gathering your choices...</p>
+                        <p class="magic-subtext" id="magic-subtext">This is going to be beautiful</p>
+                    </div>
+
+                    <!-- Phase 2: The result -->
+                    <div class="reveal-result" id="reveal-result">
+                        <div class="reveal-badge">✨ Your GIFTAWEB Experience Is Ready ✨</div>
+
+                        <div class="preview-frame" id="preview-frame">
+                            <div class="preview-browser-bar">
+                                <span class="preview-browser-dot"></span>
+                                <span class="preview-browser-dot"></span>
+                                <span class="preview-browser-dot"></span>
+                            </div>
+                            <div class="preview-content" id="preview-content">
+                                <div class="preview-hearts-deco preview-element">💕</div>
+                                <div class="preview-element" id="preview-title-el">
+                                    <div class="preview-title" id="preview-title"></div>
+                                </div>
+                                <div class="preview-element preview-polaroid-strip" id="preview-polaroids">
+                                    <div class="preview-mini-polaroid"><div class="mini-img" style="background:var(--blush)"></div></div>
+                                    <div class="preview-mini-polaroid"><div class="mini-img" style="background:var(--peach)"></div></div>
+                                    <div class="preview-mini-polaroid"><div class="mini-img" style="background:var(--lavender)"></div></div>
+                                </div>
+                                <div class="preview-element" id="preview-btn-el">
+                                    <span class="preview-mini-btn" id="preview-btn">Open Your Gift</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reveal-cta-area">
+                            <p style="font-family:var(--font-handwritten);font-size:1.1rem;color:var(--text-muted);margin-bottom:1rem;">
+                                Love what you see? Let's make it real.
+                            </p>
+                            <a href="https://instagram.com/giftaweb" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                                📸 Message Us on Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 4: OUR WORK (PORTFOLIO) ===================== -->
+    <section id="portfolio" class="portfolio-section section paper-texture">
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                <path d="M0,60 C480,10 960,10 1440,60 L1440,0 L0,0 Z" fill="var(--cream)"/>
+            </svg>
+        </div>
+
+        <div class="container">
+            <span class="section-label fade-in-up">our memory album</span>
+            <h2 class="section-title fade-in-up delay-1">Our Work</h2>
+            <p class="section-subtitle fade-in-up delay-2">
+                Every project is a story we helped someone tell. Here are a few pages from our album.
+            </p>
+
+            <div class="portfolio-grid stagger-children">
+                <!-- Project 1 -->
+                <div class="portfolio-card">
+                    <div class="tape"></div>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="assets/images/portfolio-romantic.png" alt="Ben & Sarah's Anniversary Surprise Website" loading="lazy">
+                            <div class="portfolio-card-overlay"><span>View Story →</span></div>
+                        </div>
+                        <div class="portfolio-card-bottom">
+                            <div class="portfolio-card-title">Ben & Sarah's Love Story</div>
+                            <div class="portfolio-card-type">Surprise Website</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card">
+                    <div class="tape"></div>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="assets/images/portfolio-business.png" alt="Bake & Bloom Artisan Bakery Website" loading="lazy">
+                            <div class="portfolio-card-overlay"><span>View Story →</span></div>
+                        </div>
+                        <div class="portfolio-card-bottom">
+                            <div class="portfolio-card-title">Bake & Bloom Website</div>
+                            <div class="portfolio-card-type">Business Website</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card">
+                    <div class="tape"></div>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="assets/images/portfolio-event.png" alt="Meera's Birthday Celebration Website" loading="lazy">
+                            <div class="portfolio-card-overlay"><span>View Story →</span></div>
+                        </div>
+                        <div class="portfolio-card-bottom">
+                            <div class="portfolio-card-title">Meera's Birthday Website</div>
+                            <div class="portfolio-card-type">Event Website</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-card">
+                    <div class="tape"></div>
+                    <div class="portfolio-card-inner">
+                        <div class="portfolio-card-image">
+                            <img src="assets/images/portfolio-branding.png" alt="The Cozy Corner Café Brand Identity" loading="lazy">
+                            <div class="portfolio-card-overlay"><span>View Story →</span></div>
+                        </div>
+                        <div class="portfolio-card-bottom">
+                            <div class="portfolio-card-title">The Cozy Corner Branding</div>
+                            <div class="portfolio-card-type">Logo & Social Media</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 5: HOW IT WORKS ===================== -->
+    <section id="process" class="process-section section">
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                <path d="M0,30 Q360,60 720,30 Q1080,0 1440,30 L1440,0 L0,0 Z" fill="var(--cream-warm)"/>
+            </svg>
+        </div>
+
+        <div class="container">
+            <span class="section-label fade-in-up">the journey</span>
+            <h2 class="section-title fade-in-up delay-1">Creating Something Special Is Easy</h2>
+            <p class="section-subtitle fade-in-up delay-2">
+                From your first idea to a finished digital gift — here's how the magic happens.
+            </p>
+
+            <div class="process-journey">
+                <div class="process-path">
+                    <div class="process-path-fill" id="process-path-fill"></div>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="process-step fade-in-up" data-process-step="1">
+                    <div class="process-step-marker">💌</div>
+                    <div class="process-step-content">
+                        <div class="process-step-number">Step One</div>
+                        <h3 class="process-step-title">Send Us Your Idea</h3>
+                        <p class="process-step-text">Tell us about your dream — who it's for, what you imagine, and what makes this moment special. Every great gift starts with a spark of inspiration.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step fade-in-up delay-2" data-process-step="2">
+                    <div class="process-step-marker">🎨</div>
+                    <div class="process-step-content">
+                        <div class="process-step-number">Step Two</div>
+                        <h3 class="process-step-title">We Design The Experience</h3>
+                        <p class="process-step-text">We craft a unique concept that captures the emotions, the memories, and the feelings you want to share. Every pixel is placed with intention.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step fade-in-up delay-4" data-process-step="3">
+                    <div class="process-step-marker">✨</div>
+                    <div class="process-step-content">
+                        <div class="process-step-number">Step Three</div>
+                        <h3 class="process-step-title">We Build It</h3>
+                        <p class="process-step-text">Your experience comes alive with smooth animations, heartfelt interactions, and premium details that make visitors feel something real.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step fade-in-up delay-6" data-process-step="4">
+                    <div class="process-step-marker">🎁</div>
+                    <div class="process-step-content">
+                        <div class="process-step-number">Step Four</div>
+                        <h3 class="process-step-title">You Share The Magic</h3>
+                        <p class="process-step-text">Send your gift with a simple link. Watch their face light up when they open something that was made just for them — with all your love inside.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 6: WHY GIFTAWEB ===================== -->
+    <section id="why" class="why-section section">
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                <path d="M0,60 C360,0 720,0 1080,30 C1260,45 1350,60 1440,60 L1440,0 L0,0 Z" fill="var(--white-warm)"/>
+            </svg>
+        </div>
+
+        <div class="container">
+            <span class="section-label fade-in-up">the difference</span>
+            <h2 class="section-title fade-in-up delay-1">Why GIFTAWEB?</h2>
+            <p class="section-subtitle fade-in-up delay-2">
+                Not every website is created equal. See the difference emotion makes.
+            </p>
+
+            <div class="comparison-grid">
+                <!-- Traditional -->
+                <div class="comparison-card comparison-traditional fade-in-left">
+                    <div class="comparison-header">
+                        <span class="comparison-icon">🖥️</span>
+                        <span>Traditional Website</span>
+                    </div>
+                    <ul class="comparison-items">
+                        <li class="comparison-item">Generic template design</li>
+                        <li class="comparison-item">Easily forgotten</li>
+                        <li class="comparison-item">Looks like everyone else</li>
+                        <li class="comparison-item">No emotional connection</li>
+                        <li class="comparison-item">Just another URL</li>
+                    </ul>
+                </div>
+
+                <!-- VS -->
+                <div class="comparison-vs fade-in-up delay-2">
+                    <div class="comparison-vs-circle">VS</div>
+                </div>
+
+                <!-- GIFTAWEB -->
+                <div class="comparison-card comparison-giftaweb fade-in-right">
+                    <div class="comparison-hearts" id="comparison-hearts">
+                        <span style="top:10%;left:5%;animation-delay:0s;">♥</span>
+                        <span style="top:30%;right:8%;animation-delay:1s;font-size:0.8rem;">♥</span>
+                        <span style="bottom:20%;left:10%;animation-delay:0.5s;font-size:0.6rem;">♥</span>
+                        <span style="bottom:5%;right:15%;animation-delay:1.5s;">♥</span>
+                    </div>
+                    <div class="comparison-header">
+                        <span class="comparison-icon">🎁</span>
+                        <span>GIFTAWEB Experience</span>
+                    </div>
+                    <ul class="comparison-items">
+                        <li class="comparison-item">Interactive & handcrafted</li>
+                        <li class="comparison-item">Unforgettable & memorable</li>
+                        <li class="comparison-item">Shareable & unique</li>
+                        <li class="comparison-item">Designed to delight</li>
+                        <li class="comparison-item">Built around emotion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 7: CONTACT ===================== -->
+    <section id="contact" class="contact-section section">
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+                <path d="M0,30 Q360,60 720,30 Q1080,0 1440,30 L1440,0 L0,0 Z" fill="var(--white-warm)"/>
+            </svg>
+        </div>
+
+        <div class="container">
+            <!-- Emotional storytelling intro -->
+            <div class="contact-intro fade-in-up">
+                <span class="section-label">one last thing...</span>
+                <p class="contact-story-line">Every great story has a beginning.</p>
+                <p class="contact-intro-text">
+                    Someone out there — your partner, your customer, your friend — is about to open a link and experience something they've never seen before. Something made with love, designed with care, and built to make them smile.
+                </p>
+                <p class="contact-intro-text">
+                    That story starts right here. With you. With one message.
+                </p>
+            </div>
+
+            <!-- The Grand Envelope -->
+            <div class="contact-envelope-wrapper fade-in-up delay-2" id="contact-envelope" role="button" tabindex="0" aria-label="Click to open the envelope">
+                <div class="contact-envelope">
+                    <div class="envelope-back"></div>
+                    <div class="envelope-top-flap">
+                        <div class="envelope-flap-shape"></div>
+                    </div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-seal">♥</div>
+                </div>
+                <p class="envelope-hint">tap to open ♥</p>
+            </div>
+
+            <!-- The Letter (appears after envelope click) -->
+            <div class="contact-letter" id="contact-letter">
+                <div class="letter-date" id="letter-date"></div>
+                <div class="letter-greeting">Dear future friend,</div>
+                <div class="letter-body">
+                    We know how it feels to want something truly special — something that makes someone's eyes light up, something they'll want to show everyone. That's exactly what we create at GIFTAWEB.
+                    <br><br>
+                    Whether it's a surprise website for the person you love, a brand that finally looks the way it feels, or a celebration that deserves to be remembered — we're here to make it happen.
+                </div>
+                <h3 class="letter-heading">Ready To Create Something Special?</h3>
+                <div class="letter-signature">With love,<br>The GIFTAWEB Team 💕</div>
+                <div class="letter-cta">
+                    <a href="https://instagram.com/giftaweb" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                        📸 Message Us on Instagram
+                    </a>
+                    <span class="letter-instagram-handle">@giftaweb</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confetti container -->
+        <div class="contact-confetti" id="contact-confetti"></div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="#hero" class="footer-back-to-top" aria-label="Back to top">↑</a>
+            <div class="footer-logo">GIFTAWEB</div>
+            <div class="footer-tagline">crafted with love, designed to delight</div>
+            <a href="https://instagram.com/giftaweb" target="_blank" rel="noopener noreferrer" class="footer-instagram">
+                📸 @giftaweb
+            </a>
+            <p class="footer-text">
+                © <span id="footer-year">2025</span> GIFTAWEB. Every pixel placed with intention.
+            </p>
+            <div class="footer-hearts">♥ ♥ ♥</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/builder.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
