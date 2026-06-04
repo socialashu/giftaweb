@@ -109,7 +109,6 @@ giftawebsite/
 
 ## How to View
 
-Open [index.html](file:///c:/Users/socia/Downloads/giftawebsite/index.html) in any modern browser. No server required — all assets are local.
 
 ### Full Experience Includes:
 1. **Preloader** with animated hearts and loading bar
